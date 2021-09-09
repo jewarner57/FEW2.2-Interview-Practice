@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dashboard</title>
+  <style>
+    /* Set the body color to the desired color */
+    body {
+      background-color: #77d8d8;
+    }
+
+    .grid-cell {
+      /* Set child divs of dashboard to be white and give some padding*/
+      background-color: white;
+      padding: 20px;
+      height: 200px;
+    }
+
+    .dashboard {
+      /* Create a grid on the dashboard component */
+      display: grid;
+      margin: 0 80px;
+      /* Create a grid with 4 columns and 2 rows about 1fr in width so they are all the same*/
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: (3, 1fr);
+
+      /* Create a small gap between columns and rows */
+      column-gap: 10px;
+      row-gap: 15px;
+    }
+
+    .title-wrap {
+      /* Give the title text some padding so it floats above the other grid rows */
+      padding: 20px;
+      text-align: center;
+
+      /* Give the title a grid area consuming the whole first row */
+      grid-area: 1 / 1 / 1 / 5;
+    }
+
+    /* Set the welcome to the 2nd top left cell -> last top right cell */
+    .welcome {
+      grid-area: 2 / 2 / 2 / 5;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dashboard">
+    <!-- Wrap this h1 so we can use it in a grid -->
+    <div class="title-wrap">
+      <h1 class="title">Dashboard</h1>
+    </div>
+    <div class="monster grid-cell">Monster</div>
+    <div class="welcome grid-cell">
+      <h2>Welcome</h2>
+      <p>Some text... </p>
+    </div>
+    <div class="parents grid-cell">
+      <h2>Parents</h2>
+      <p>Some text... </p>
+    </div>
+    <div class="customize grid-cell">
+      <h2>Customize</h2>
+    </div>
+    <div class="level-up grid-cell">
+      <h2>Level Up</h2>
+    </div>
+    <div class="play grid-cell">
+      <h2>Play</h2>
+    </div>
+  </div>
+
+</body>
+
+</html>
