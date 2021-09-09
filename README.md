@@ -6,4 +6,4 @@
   * Would you prefer I use grid or flexbox to solve this problem
 
 ### Pseudocode out a solution:
-  * Look in the style tag.
+  * See comments index.html
